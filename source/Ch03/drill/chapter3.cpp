@@ -19,10 +19,17 @@ int main()
 	cout << "What is the friend's gender? (m/f) \n";
 	cin >> friend_sex;
 
-	if (friend_sex=='m')
+	/*if (friend_sex=='m')
 		cout << "If you meet "<< friend_name << ", please tell him to call me."<<endl;
-	else cout << "If you meet "<< friend_name << ", please tell her to call me." <<endl;
+	else cout << "If you meet "<< friend_name << ", please tell her to call me." <<endl;*/
 
+	switch (friend_sex)
+	{
+	case 'm' : cout<<"If you meet " <<friend_name << ", please tell him to call me.\n"; break;
+	case 'f' : cout<<"If you meet " <<friend_name << ", please tell her to call me.\n"; break;
+	default: simple_error("Not a recognized gender");
+	}
+	
 	int age;
 
 	cout << "Enter the age of " << firstname << ":"<< endl;
